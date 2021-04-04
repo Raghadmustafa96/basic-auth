@@ -6,7 +6,8 @@ const notFoundRequest = require('./middleware/404.js');
 const errorHandler = require('./middleware/500.js');
 const app = express();
 const userRouter = require('./auth/router.js');
-
+const morgan = require('morgan');
+app.use(morgan('dev'));
 
 app.use(express.json());
 app.use(cors());
