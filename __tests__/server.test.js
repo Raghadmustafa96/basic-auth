@@ -2,7 +2,6 @@
 const { app } = require('../src/server.js');
 const supergoose = require('@code-fellows/supergoose'); 
 const request = supergoose(app);
-let id;
 
 describe('Server Side', () => {
   it('should the status be 404 if handle invalid routes /bad', async () => {
