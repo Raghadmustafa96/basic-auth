@@ -6,7 +6,7 @@ const server = require('./src/server.js');
 
 const port = process.env.PORT;
 
-mongoose.connect('mongodb://localhost:27017/auth', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     server.start(port);
   })
